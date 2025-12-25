@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Subnet Ping Drone</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="grid"></div>
+    <main class="console">
+      <header>
+        <p class="eyebrow">AUTONOMOUS NETWORK SWEEP</p>
+        <h1>Subnet Ping Drone</h1>
+        <p class="subtitle">
+          Dispatch a robotic scan across your subnet. Enter the IP and prefix, then
+          launch the sweep.
+        </p>
+      </header>
+
+      <section class="panel">
+        <div class="field">
+          <label for="ip">Base IP Address</label>
+          <input id="ip" name="ip" placeholder="192.168.1.10" />
+        </div>
+        <div class="field">
+          <label for="subnet">Subnet Prefix</label>
+          <input id="subnet" name="subnet" placeholder="24" />
+        </div>
+        <button id="ping-button">
+          <span class="dot"></span>
+          Show Hosts &amp; Ping
+        </button>
+      </section>
+
+      <section class="panel output">
+        <div class="output-header">
+          <h2>Scan Output</h2>
+          <span id="status">Awaiting command...</span>
+        </div>
+        <div id="results" class="results"></div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
